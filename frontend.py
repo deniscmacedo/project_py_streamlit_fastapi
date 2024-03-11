@@ -19,5 +19,6 @@ inputs = {
     "y": y
 }
 if st.button('Calculate'):
-    res = requests.post(url = "http://127.0.0.1:8000/calculate", data=json.dumps(inputs))
+    #http://127.0.0.1:8000/
+    res = requests.post(url = "https://projectpyappfastapi.streamlit.app/calculate", data=json.dumps(inputs)) 
     st.subheader(f"Response from API  = {res.text}")
